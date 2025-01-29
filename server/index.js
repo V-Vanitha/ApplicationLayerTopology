@@ -39,11 +39,11 @@ ElasticsearchPreparation.prepareElasticsearch().catch(err => {
         console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
         console.log('Swagger-ui is available on http://localhost:%d/docs', serverPort);
         });
-        // PrepareApprovedLinks.createPreApprovedLinks(preApprovedLinks).catch(
-        //     err => {
-        //         console.error(`Error entering preapproved links : ${err}`);
-        //     }
-        // );
+        PrepareApprovedLinks.createPreApprovedLinks(preApprovedLinks).catch(
+             err => {
+                 console.error(`Error entering preapproved links : ${err}`);
+             }
+         );
         appCommons.performApplicationRegistration();
    }
 );
